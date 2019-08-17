@@ -2,7 +2,7 @@ class ChatroomController < ApplicationController
   before_action :require_user
 
   def index
-    @messages = Message.all.order(:created_at)
+    @messages = Message.custom_display
     @message = Message.new
   end
 
